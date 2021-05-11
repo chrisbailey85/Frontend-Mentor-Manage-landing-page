@@ -12,11 +12,32 @@ img {
   display: none;
 }
 
-body {
-  position: relative;
+.heading {
+  font-weight: 700;
+  color: #242d52;
 }
 
-.body.show__overlay {
+.paragraph {
+  color: #9095a7;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.btn {
+  background-color: #f25f3a;
+  border: none;
+  border-radius: 50px;
+  color: #fafafa;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.8rem;
+}
+
+body {
+  position: relative;
+  font-family: "Be Vietnam", sans-serif;
+}
+
+.show__overlay {
   overflow: hidden;
 }
 
@@ -44,13 +65,12 @@ body::after {
 
 .header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   padding: 2rem;
 }
 
 .hamburger {
-  height: 1.2rem;
+  height: 1.3rem;
   width: 2rem;
   background-color: transparent;
   border: none;
@@ -60,8 +80,8 @@ body::after {
   display: block;
   width: 100%;
   height: 4px;
-  border-radius: 20px;
   background-color: #1d1e25;
+  transition: transform 0.3s ease;
 }
 .hamburger__inner {
   display: block;
@@ -70,7 +90,6 @@ body::after {
   left: 0;
   width: 100%;
   height: 4px;
-  border-radius: 20px;
   background-color: #1d1e25;
 }
 .hamburger__outter::before {
@@ -81,8 +100,18 @@ body::after {
   display: block;
   width: 100%;
   height: 4px;
-  border-radius: 20px;
   background-color: #1d1e25;
+  transition: transform 0.3s ease;
+}
+
+.hamburger.open .hamburger__inner {
+  opacity: 0;
+}
+.hamburger.open .hamburger__outter {
+  transform: rotate(45deg);
+}
+.hamburger.open .hamburger__outter::before {
+  transform: rotate(-90deg);
 }
 
 .nav {
@@ -91,7 +120,7 @@ body::after {
   transform: translateX(-50%) scale(0);
   top: 6rem;
   background-color: #fafafa;
-  width: 85%;
+  width: calc(100% - 4rem);
   border-radius: 5px;
   text-align: center;
 }
@@ -101,9 +130,84 @@ body::after {
 .nav__item {
   margin: 1.5rem 0;
 }
+.nav__link {
+  text-decoration: none;
+  color: #1d1e25;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
 
-.main {
-  padding: 0 2rem;
+.nav.open {
+  transform: translateX(-50%) scale(1);
+}
+
+.banner {
+  margin: 0.5rem 0;
+}
+.banner__content {
+  position: relative;
+  text-align: center;
+  overflow-x: hidden;
+}
+.banner__content::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -130px;
+  width: 80%;
+  height: 400px;
+  background-size: cover;
+  background-image: url("../images/bg-tablet-pattern.svg");
+  z-index: -1;
+}
+.banner--heading {
+  font-size: 2.2rem;
+  margin: 0 2rem;
+}
+.banner--paragraph {
+  padding: 0.5rem 0;
+  margin: 0 2rem;
+}
+.banner--btn {
+  margin: 1rem 0;
+  box-shadow: 0px 5px 10px rgba(242, 95, 58, 0.37);
+}
+
+.about {
+  margin-top: 4rem;
+}
+.about__header {
+  text-align: center;
+  margin: 1rem 2rem;
+}
+.about--heading {
+  margin: 1rem 0;
+  font-size: 2.2rem;
+}
+.about__list {
+  margin-top: 3rem;
+  list-style-type: none;
+}
+
+.list__heading {
+  background-color: #ffefeb;
+  margin-left: 2rem;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.list__number {
+  background-color: #f25f3a;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  color: #fafafa;
+  margin-right: 1rem;
+}
+
+.list--paragraph {
+  margin: 0.5rem 2rem 2rem 2rem;
 }
 
 .attribution {
