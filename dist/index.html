@@ -109,10 +109,11 @@
           </li>
         </ul>
       </section>
+
       <section class="testimonies">
         <h2 class="heading testimonies--heading">What they’ve said</h2>
         <div class="cards">
-          <div class="card">
+          <div class="card show">
             <img
               src="./images/avatar-anisha.png"
               alt="picture of"
@@ -162,7 +163,7 @@
 
           <div class="card">
             <img
-              src="./images/avatar-ali.png"
+              src="./images/avatar-shanai.png"
               alt="picture of Shanai Gough"
               class="card__img"
             />
@@ -177,10 +178,10 @@
           </div>
         </div>
         <div class="card__controls dt--hidden">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
+          <div class="controls__dot current"></div>
+          <div class="controls__dot"></div>
+          <div class="controls__dot"></div>
+          <div class="controls__dot"></div>
         </div>
         <button class="btn about--btn">Get Started</button>
       </section>
@@ -189,12 +190,17 @@
         <h2 class="cta--heading heading">
           Simplify how your team works today. Get Started
         </h2>
-        <button class="btn cta--btn"></button>
+        <button class="btn cta--btn">Get started</button>
       </section>
     </main>
     <footer class="footer">
       <form class="footer__form">
-        <input type="text" name="email" placeholder=" Updates in your inbox…" />
+        <input
+          type="text"
+          name="email"
+          placeholder=" Updates in your inbox…"
+          class="footer__email"
+        />
         <button class="btn footer--btn">Go</button>
       </form>
 
@@ -270,22 +276,22 @@
         </a>
       </div>
       <div class="footer__logo">
-        <img src="./images/logo.svg" alt="manage logo" />
+        <img src="./images/logo-footer.svg" alt="manage logo" />
       </div>
       <div class="copyright">
         <p class="copyright__text">Copyright 2020. All Rights Reserved</p>
       </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://twitter.com/bailey_coding" target="_blank"
+          >Your Chris Bailey</a
+        >.
+      </div>
     </footer>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by
-      <a href="https://twitter.com/bailey_coding" target="_blank"
-        >Your Chris Bailey</a
-      >.
-    </div>
     <script src="./main.js"></script>
   </body>
 </html>

@@ -27,6 +27,7 @@ img {
   color: colors.$very-light-gray;
   padding: 0.8rem 1.5rem;
   font-size: 0.8rem;
+  font-weight: 700;
 }
 body {
   position: relative;
@@ -154,7 +155,7 @@ body::after {
     }
   }
   &--heading {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     margin: 0 2rem;
   }
   &--paragraph {
@@ -175,11 +176,14 @@ body::after {
 
   &--heading {
     margin: 1rem 0;
-    font-size: 2.2rem;
+    font-size: 2.1rem;
   }
   &__list {
     margin-top: 3rem;
     list-style-type: none;
+  }
+  &--btn {
+    box-shadow: 0px 5px 10px hsla(12, 88%, 59%, 0.37);
   }
 }
 .list__heading {
@@ -198,14 +202,175 @@ body::after {
   color: colors.$very-light-gray;
   margin-right: 1rem;
 }
+.testimonies {
+  margin: 3rem 1rem 2rem;
+  text-align: center;
+  &--heading {
+    font-size: 2.1rem;
+    margin-bottom: 6rem;
+  }
+}
 
+.cards {
+  position: relative;
+  height: 350px;
+}
+
+.card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: colors.$very-light-gray;
+  padding: 3rem 1rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  &__img {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+  }
+
+  &__name {
+    font-weight: 700;
+    margin: 1.5rem 0;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+}
+
+.card.show {
+  opacity: 1;
+}
+.controls__dot {
+  width: 10px;
+  height: 10px;
+  border: 1px solid colors.$bright-red;
+  border-radius: 50%;
+  margin: 0 0.3rem;
+}
+
+.controls__dot.current {
+  background-color: colors.$bright-red;
+}
 .list--paragraph {
   margin: 0.5rem 2rem 2rem 2rem;
 }
-.attribution {
-  font-size: 11px;
+
+.cta {
+  position: relative;
+  overflow: hidden;
+  background-color: colors.$bright-red;
+  text-align: center;
+  padding: 4rem 2rem;
+  &--heading {
+    color: colors.$very-light-gray;
+    margin-bottom: 2rem;
+    font-size: 2.1rem;
+  }
+  &--btn {
+    background-color: colors.$very-light-gray;
+    color: colors.$bright-red;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: -300px;
+    width: 100%;
+    height: 400px;
+    background-size: contain;
+    background-image: url("../images/bg-tablet-pattern.svg");
+    opacity: 0.1;
+    background-repeat: no-repeat;
+  }
+}
+
+.footer {
+  position: relative;
+  background-color: colors.$very-dark-blue;
+  padding: 2rem;
+  &__form {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__email {
+    padding: 0.8rem 0.5rem;
+    border-radius: 50px;
+    border: none;
+    margin-right: 1rem;
+    width: 100%;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+  }
+  &__list {
+    list-style-type: none;
+  }
+  &__link {
+    text-decoration: none;
+    color: colors.$very-light-gray;
+  }
+  &__logo {
+    margin: 2rem 0;
+    text-align: center;
+  }
+}
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__link {
+    text-decoration: none;
+  }
+  &__img {
+    width: 24px;
+    height: 24px;
+  }
+}
+/* 
+    hidding spans
+    styles from  https://a11y-101.com
+*/
+.hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  &:focus {
+    clip: auto;
+    height: auto;
+    overflow: auto;
+    position: absolute;
+    width: auto;
+  }
+}
+
+.copyright {
+  color: colors.$very-light-gray;
   text-align: center;
 }
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+  color: colors.$very-light-gray;
+}
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: colors.$very-light-gray;
 }
