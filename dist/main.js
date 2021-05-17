@@ -1,6 +1,7 @@
 const body = document.querySelector('body');
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('.nav');
+const cardsContainer = document.querySelector('.cards')
 const cards = document.querySelectorAll('.card');
 const cardControls = document.querySelectorAll('.controls__dot');
 
