@@ -6,6 +6,7 @@
 
 img {
   max-width: 100%;
+  max-height: 100%;
 }
 
 .ms-hidden {
@@ -545,6 +546,304 @@ body::after {
     }
     100% {
       right: -100px;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  body::after {
+    top: -220px;
+    width: 40%;
+    height: 600px;
+  }
+
+  .banner {
+    margin: 0.5rem 2rem;
+  }
+  .banner__content {
+    text-align: left;
+    width: 80%;
+  }
+  .banner--heading, .banner--paragraph {
+    margin-left: 0;
+  }
+
+  .about {
+    margin-bottom: 4rem;
+  }
+
+  .list__heading {
+    background-color: transparent;
+  }
+
+  .list--paragraph {
+    margin: 0.5rem 2rem 2rem 7rem;
+  }
+
+  .testimonies {
+    padding-bottom: 6rem;
+  }
+
+  .cards {
+    right: 0;
+  }
+
+  .card {
+    margin: 0 1rem;
+    width: 400px !important;
+  }
+
+  .cta {
+    padding: 2rem 2rem;
+  }
+  .cta--heading {
+    width: 70%;
+  }
+  .cta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 100%;
+    height: 500px;
+  }
+  .cta::after {
+    top: -300px;
+    right: -700px;
+    width: 100%;
+    height: 400px;
+  }
+
+  .footer__form {
+    grid-column: 3/-1;
+    grid-row: 1/2;
+    display: flex;
+    margin-top: 2rem;
+    height: 2.5rem;
+  }
+  .footer--btn {
+    margin: 0 1rem;
+    width: 30%;
+  }
+  @keyframes scrollCards {
+    0% {
+      right: 0;
+    }
+    50% {
+      right: 1000px;
+    }
+    100% {
+      right: -100px;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .hamburger {
+    display: none;
+  }
+
+  .ms-hidden {
+    display: block;
+  }
+
+  .logo {
+    height: 24px;
+  }
+
+  .header {
+    padding: 2rem 4rem;
+    align-items: center;
+  }
+  .header--btn {
+    padding: 0 1.5rem;
+    height: 32px;
+  }
+
+  .nav {
+    all: unset;
+    height: 100%;
+    width: 50%;
+  }
+  .nav__list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+  .nav__link {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  body::after {
+    top: -200px;
+    width: 40%;
+    height: 600px;
+  }
+
+  .banner {
+    margin: 0.5rem 4rem;
+  }
+  .banner__content {
+    text-align: left;
+    width: 80%;
+  }
+  .banner--heading, .banner--paragraph {
+    margin-left: 0;
+  }
+
+  .about {
+    margin: 4rem;
+  }
+  .about__header {
+    margin: 1rem 2rem 1rem 0;
+  }
+
+  .list__heading {
+    background-color: transparent;
+  }
+
+  .list--paragraph {
+    margin: 0.5rem 2rem 2rem 7rem;
+  }
+
+  .card {
+    width: 500px !important;
+  }
+
+  .cta {
+    padding: 2rem 4rem;
+  }
+  .cta--heading {
+    width: 50%;
+  }
+  .cta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 100%;
+    height: 500px;
+  }
+  .cta::after {
+    top: -305px;
+    right: -890px;
+    width: 100%;
+    height: 400px;
+  }
+
+  .footer__form {
+    grid-column: 3/-1;
+    grid-row: 1/2;
+    display: flex;
+    margin-top: 2rem;
+    height: 2.5rem;
+  }
+  .footer--btn {
+    margin: 0 1rem;
+    width: 30%;
+  }
+  @keyframes scrollCards {
+    0% {
+      right: 0;
+    }
+    50% {
+      right: 1148px;
+    }
+    100% {
+      right: -48px;
+    }
+  }
+}
+@media (min-width: 1400px) {
+  .header {
+    padding: 2rem 8rem;
+  }
+
+  .nav {
+    width: 40%;
+  }
+
+  body::after {
+    top: -70px;
+    height: 630px;
+  }
+
+  .banner {
+    margin: 0.5rem 8rem;
+    justify-content: space-between;
+  }
+  .banner__imgs {
+    height: 500px;
+  }
+  .banner__content {
+    text-align: left;
+    width: 40%;
+  }
+  .banner--heading {
+    font-size: 3rem;
+  }
+  .banner--paragraph {
+    padding: 2rem 0;
+    font-size: 1.2rem;
+  }
+
+  .about {
+    margin: 4rem 8rem;
+  }
+  .about__header {
+    margin: 1rem 2rem 1rem 0;
+  }
+  .about__list {
+    margin-left: 6rem;
+  }
+
+  .list--paragraph {
+    margin: 0.5rem 0 2rem 7rem;
+  }
+
+  .card {
+    width: 500px !important;
+  }
+
+  .cta {
+    padding: 2rem 8rem;
+  }
+  .cta--heading {
+    width: 35%;
+  }
+  .cta::before {
+    left: 80px;
+  }
+  .cta::after {
+    top: -305px;
+    right: -1260px;
+    width: 100%;
+    height: 430px;
+  }
+
+  .footer {
+    padding: 2rem 8rem;
+  }
+  .footer__form {
+    grid-column: 3/-1;
+    grid-row: 1/2;
+    display: flex;
+    margin-top: 2rem;
+    height: 2.5rem;
+  }
+  .footer--btn {
+    margin: 0 1rem;
+    width: 30%;
+  }
+  @keyframes scrollCards {
+    0% {
+      right: 0;
+    }
+    50% {
+      right: 748px;
+    }
+    100% {
+      right: -48px;
     }
   }
 }
