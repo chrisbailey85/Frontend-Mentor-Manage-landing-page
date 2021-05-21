@@ -32,6 +32,8 @@ img {
   padding: 0.8rem 1.5rem;
   font-size: 0.8rem;
   font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.4s ease;
 }
 
 body {
@@ -138,6 +140,8 @@ body::after {
   color: #1d1e25;
   font-weight: 700;
   letter-spacing: -0.5px;
+  cursor: pointer;
+  transition: opacity 0.4s ease;
 }
 
 .nav.open {
@@ -289,6 +293,8 @@ body::after {
 .cta--btn {
   background-color: #fafafa;
   color: #f25f3a;
+  cursor: pointer;
+  transition: opacity 0.4s ease;
 }
 .cta::before {
   content: "";
@@ -309,10 +315,12 @@ body::after {
   padding: 2rem;
 }
 .footer__form {
+  position: relative;
   display: flex;
   justify-content: space-between;
 }
 .footer__email {
+  position: relative;
   padding: 0.8rem 0.5rem;
   border-radius: 50px;
   border: none;
@@ -330,10 +338,24 @@ body::after {
 .footer__link {
   text-decoration: none;
   color: #fafafa;
+  cursor: pointer;
+  transition: color 0.4s ease;
 }
 .footer__logo {
   margin: 2rem 0;
   text-align: center;
+}
+.footer__invaild {
+  display: none;
+  position: absolute;
+  color: #f25f3a;
+  bottom: -1.2rem;
+  left: 0.5rem;
+  font-size: 0.7rem;
+}
+
+.invaild {
+  color: #f25f3a;
 }
 
 .social {
@@ -344,9 +366,18 @@ body::after {
 .social__link {
   text-decoration: none;
 }
-.social__img {
-  width: 24px;
-  height: 24px;
+.social__icon {
+  color: #fafafa;
+  font-size: 24px;
+  transition: color 0.4s ease;
+}
+.social--youtube {
+  color: initial;
+  background-color: #fafafa;
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 1rem;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 /* 
@@ -386,6 +417,7 @@ body::after {
 
 .attribution a {
   color: #fafafa;
+  transition: color 0.4s ease;
 }
 
 @media (min-width: 768px) {
@@ -471,8 +503,10 @@ body::after {
     width: 70%;
   }
   .cta--btn {
+    position: relative;
     background-color: #fafafa;
     color: #f25f3a;
+    z-index: 100;
   }
   .cta::before {
     content: "";
@@ -845,6 +879,39 @@ body::after {
     100% {
       right: -48px;
     }
+  }
+}
+@media (pointer: fine) {
+  .nav__link:hover {
+    opacity: 0.6;
+  }
+
+  .footer__link:hover,
+.attribution a:hover {
+    color: #f25f3a;
+  }
+
+  .btn:hover {
+    opacity: 0.8;
+  }
+
+  .footer--btn:hover {
+    opacity: 1;
+    background-color: #f6866a;
+  }
+
+  .cta--btn:hover {
+    opacity: 1;
+    color: #f6866a;
+  }
+
+  .social__icon:hover {
+    color: #f25f3a;
+  }
+
+  .social--youtube:hover {
+    background-color: #f25f3a;
+    color: #fafafa;
   }
 }
 

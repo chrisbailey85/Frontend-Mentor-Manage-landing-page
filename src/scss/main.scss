@@ -29,6 +29,8 @@ img {
   padding: 0.8rem 1.5rem;
   font-size: 0.8rem;
   font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.4s ease;
 }
 body {
   position: relative;
@@ -132,6 +134,8 @@ body::after {
     color: colors.$very-dark-blue;
     font-weight: 700;
     letter-spacing: -0.5px;
+    cursor: pointer;
+    transition: opacity 0.4s ease;
   }
 }
 .nav.open {
@@ -280,6 +284,8 @@ body::after {
   &--btn {
     background-color: colors.$very-light-gray;
     color: colors.$bright-red;
+    cursor: pointer;
+    transition: opacity 0.4s ease;
   }
   &::before {
     content: "";
@@ -300,17 +306,18 @@ body::after {
   background-color: colors.$very-dark-blue;
   padding: 2rem;
   &__form {
+    position: relative;
     display: flex;
     justify-content: space-between;
   }
   &__email {
+    position: relative;
     padding: 0.8rem 0.5rem;
     border-radius: 50px;
     border: none;
     margin-right: 1rem;
     width: 100%;
   }
-
   &__nav {
     display: flex;
     justify-content: space-between;
@@ -322,11 +329,25 @@ body::after {
   &__link {
     text-decoration: none;
     color: colors.$very-light-gray;
+    cursor: pointer;
+    transition: color 0.4s ease;
   }
   &__logo {
     margin: 2rem 0;
     text-align: center;
   }
+
+  &__invaild {
+    display: none;
+    position: absolute;
+    color: colors.$bright-red;
+    bottom: -1.2rem;
+    left: 0.5rem;
+    font-size: 0.7rem;
+  }
+}
+.invaild {
+  color: colors.$bright-red;
 }
 .social {
   display: flex;
@@ -335,9 +356,18 @@ body::after {
   &__link {
     text-decoration: none;
   }
-  &__img {
-    width: 24px;
-    height: 24px;
+  &__icon {
+    color: colors.$very-light-gray;
+    font-size: 24px;
+    transition: color 0.4s ease;
+  }
+  &--youtube {
+    color: initial;
+    background-color: colors.$very-light-gray;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 1rem;
+    transition: background-color 0.4s ease, color 0.4s ease;
   }
 }
 /* 
@@ -375,6 +405,7 @@ body::after {
 }
 .attribution a {
   color: colors.$very-light-gray;
+  transition: color 0.4s ease;
 }
 
 @media (min-width: 768px) {
@@ -455,8 +486,10 @@ body::after {
       width: 70%;
     }
     &--btn {
+      position: relative;
       background-color: colors.$very-light-gray;
       color: colors.$bright-red;
+      z-index: 100;
     }
     &::before {
       content: "";
@@ -651,6 +684,9 @@ body::after {
       width: 100%;
       align-items: center;
     }
+    &__item {
+      margin: 0;
+    }
     &__link {
       font-size: 0.9rem;
       font-weight: 500;
@@ -827,5 +863,34 @@ body::after {
         right: -48px;
       }
     }
+  }
+}
+
+@media (pointer: fine) {
+  .nav__link:hover {
+    opacity: 0.6;
+  }
+  .footer__link:hover,
+  .attribution a:hover {
+    color: colors.$bright-red;
+  }
+
+  .btn:hover {
+    opacity: 0.8;
+  }
+  .footer--btn:hover {
+    opacity: 1;
+    background-color: lighten(colors.$bright-red, 10);
+  }
+  .cta--btn:hover {
+    opacity: 1;
+    color: lighten(colors.$bright-red, 10);
+  }
+  .social__icon:hover {
+    color: colors.$bright-red;
+  }
+  .social--youtube:hover {
+    background-color: colors.$bright-red;
+    color: colors.$very-light-gray;
   }
 }

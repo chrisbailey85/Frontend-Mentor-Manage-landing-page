@@ -4,6 +4,22 @@ const nav = document.querySelector('.nav');
 const cardsContainer = document.querySelector('.cards')
 const cards = document.querySelectorAll('.card');
 const cardControls = document.querySelectorAll('.controls__dot');
+const email = document.querySelector('.footer__email');
+const btn = document.querySelector('.footer--btn')
+const invaildMessage = document.querySelector('.footer__invaild')
+const regexPatten = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+
+btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (!email.value.match(regexPatten)) {
+        invaildMessage.style.display = 'block';
+        email.classList.add('invaild');
+    } else {
+        invaildMessage.style.display = 'none';
+        email.classList.remove('invaild');
+    }
+})
 
 cardControls.forEach((dot, index) => {
     dot.addEventListener('click', () => {
